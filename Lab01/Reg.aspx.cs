@@ -13,19 +13,32 @@ namespace Lab01
         {
             if (IsPostBack)
             {
-                GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+                Page.Validate();
                 
-                ResponseRepository.GetRepository().AddResponse(rsvp);
-            
-                if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
+                if (!Page.IsValid)
                 {
-                    Response.Redirect("seeyouthere.html");
+                    return;
+                    
                 }
-                else
+                if (Page.IsValid)
                 {
-                    Response.Redirect("sorryyoucantcome.html");
+                    GuestResponse rsvp = new GuestResponse(name.Text, email.Text, phone.Text, CheckBoxYN.Checked);
+
+                    ResponseRepository.GetRepository().AddResponse(rsvp);
+
+                    if (rsvp.WillAttend.HasValue && rsvp.WillAttend.Value)
+                    {
+                        Response.Redirect("seeyouthere.html");
+                    }
+                    else
+                    {
+                        Response.Redirect("sorryyoucantcome.html");
+                    }
                 }
+                
+
             }
+            
 
         }
     }
