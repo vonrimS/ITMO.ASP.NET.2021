@@ -1,16 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Summary.aspx.cs" Inherits="Lab01.Summary" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Summary.aspx.cs" Inherits="Lab01.Summary" MasterPageFile="~/Site.Master" %>
 <%@ Import Namespace="Lab01" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Участникит семенара</title>
-    <link href="Styles.css" rel="stylesheet" />
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="MainContent" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
         <div>
             <h2>Приглашения</h2>
             <h3>Выступающие с докладом: </h3>
@@ -51,6 +43,4 @@
 
             </table>
         </div>
-    </form>
-</body>
-</html>
+    </asp:Content>

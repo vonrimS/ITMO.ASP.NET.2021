@@ -26,11 +26,25 @@ button[type=submit]{
     padding:5px;
 }
 
-table, td, th{
+table, td, th {
     border: thin solid black;
     border-collapse: collapse;
     padding: 5px;
     background-color: lemonchiffon;
     text-align: left;
     margin: 10px 0;
+    width: 200px;
+    height: 150px
+}
+
+.td__header, .td__footer {
+        height: 50px;
+        background-color:red;
+}
+
+.footer_menu li{
+    margin:0px;
+    padding: 0 20px;
+    display: inline;
+    border-right: 1px solid #000000;
 }

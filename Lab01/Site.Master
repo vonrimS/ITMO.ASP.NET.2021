@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Lab01.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>RSVP</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css"/>
+    
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="td__header" colspan="2">&nbsp;
+                        <h2>RSVP</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td >&nbsp;
+                        Меню
+                        <div class="menu">
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                                EnableViewState="false" Orientation="Vertical" ForeColor="Red"> 
+                                <Items>
+                                    <asp:MenuItem NavigateUrl="~/Start.aspx" Text="Главная"/> 
+                                    <asp:MenuItem NavigateUrl="~/Reg.aspx" Text="Регистрация" />
+                                    <asp:MenuItem NavigateUrl="~/Summary.aspx" Text="Отчет о регистрации" />
+                                    <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности" />
+                                </Items>
+                            </asp:Menu>
+                        </div>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td__footer" colspan="2">&nbsp;
+                        <%--Нижний колонтитул--%>
+                        <div id="temo_footer">
+                            <ul class="footer_menu">
+                                <li><a href="Start.aspx">Главная</a></li>
+                                <li><a href="Reg.aspx">Регистрация</a></li>
+                                <li><a href="Summary.aspx">Отчет о регистарции</a></li>
+                                <li><a href="About.aspx">Подробности</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <
+        </div>
+    </form>
+</body>
+</html>

@@ -11,7 +11,7 @@ namespace Lab01
 {
 
 
-    public partial class Summary
+    public partial class About
     {
     }
 }
