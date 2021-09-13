@@ -57,3 +57,7 @@ C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\obj\Debug\Lab01.cs
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\obj\Debug\Lab01.csproj.CopyComplete
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\obj\Debug\Lab01.dll
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\obj\Debug\Lab01.pdb
+C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.dll
+C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.SqlServer.dll
+C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.xml
+C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.SqlServer.xml
