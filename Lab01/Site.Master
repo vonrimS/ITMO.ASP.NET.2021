@@ -29,12 +29,12 @@
                     <td >&nbsp;
                         Меню
                         <div class="menu">
-                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menuOne"
                                 EnableViewState="false" Orientation="Vertical" ForeColor="Red"> 
                                 <Items>
                                     <asp:MenuItem NavigateUrl="~/Start.aspx" Text="Главная"/> 
                                     <asp:MenuItem NavigateUrl="~/Reg.aspx" Text="Регистрация" />
-                                    <asp:MenuItem NavigateUrl="~/Summary.aspx" Text="Отчет о регистрации" />
+                                    <asp:MenuItem NavigateUrl="~/SummaryDB.aspx" Text="Отчет о регистрации" />
                                     <asp:MenuItem NavigateUrl="~/About.aspx" Text="Подробности" />
                                 </Items>
                             </asp:Menu>

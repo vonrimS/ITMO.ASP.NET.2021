@@ -59,9 +59,7 @@ namespace Lab01
                     }
                 }
                 
-
-            }
-            
+            }          
 
         }
     }

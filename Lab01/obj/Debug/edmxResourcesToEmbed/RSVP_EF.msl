@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище RSVPSeminarDBmdfModelContainer" CdmEntityContainer="RSVP_Entities">
+    <EntitySetMapping Name="GuestResponses">
+      <EntityTypeMapping TypeName="RSVP.SeminarDB.mdfModel.GuestRespons">
+        <MappingFragment StoreEntitySet="GuestResponses">
+          <ScalarProperty Name="GuestResponseId" ColumnName="GuestResponseId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="WillAttend" ColumnName="WillAttend" />
+          <ScalarProperty Name="Rdata" ColumnName="Rdata" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

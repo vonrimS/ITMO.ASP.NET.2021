@@ -50,7 +50,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.EntityDataSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.EntityDataSource.6.0.0\lib\net40\Microsoft.AspNet.EntityDataSource.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -77,11 +82,22 @@
     <Content Include="About.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Reg.aspx" />
+    <Content Include="RSVP_EF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RSVP_EF.Context.cs</LastGenOutput>
+      <DependentUpon>RSVP_EF.edmx</DependentUpon>
+    </Content>
+    <Content Include="RSVP_EF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RSVP_EF.edmx</DependentUpon>
+      <LastGenOutput>RSVP_EF.cs</LastGenOutput>
+    </Content>
     <Content Include="seeyouthere.html" />
     <Content Include="sorryyoucantcome.html" />
     <Content Include="Start.aspx" />
     <Content Include="Styles.css" />
     <Content Include="Summary.aspx" />
+    <Content Include="SummaryDB.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +111,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GuestRespons.cs">
+      <DependentUpon>RSVP_EF.tt</DependentUpon>
+    </Compile>
     <Compile Include="GuestResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reg.aspx.cs">
@@ -105,6 +124,21 @@
       <DependentUpon>Reg.aspx</DependentUpon>
     </Compile>
     <Compile Include="ResponseRepository.cs" />
+    <Compile Include="RSVP_EF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSVP_EF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RSVP_EF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSVP_EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RSVP_EF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSVP_EF.edmx</DependentUpon>
+    </Compile>
     <Compile Include="SampleContext.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -127,16 +161,33 @@
     <Compile Include="Summary.aspx.designer.cs">
       <DependentUpon>Summary.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SummaryDB.aspx.cs">
+      <DependentUpon>SummaryDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SummaryDB.aspx.designer.cs">
+      <DependentUpon>SummaryDB.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Site.Master" />
+    <EntityDeploy Include="RSVP_EF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RSVP_EF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="RSVP_EF.edmx.diagram">
+      <DependentUpon>RSVP_EF.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

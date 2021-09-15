@@ -61,3 +61,4 @@ C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramewor
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.SqlServer.dll
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.xml
 C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\EntityFramework.SqlServer.xml
+C:\Users\mikhail.smirnov\source\repos\ITMO.ASP.NET.2021\Lab01\bin\Microsoft.AspNet.EntityDataSource.dll
